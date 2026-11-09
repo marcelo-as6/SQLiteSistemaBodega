@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/bg_light">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Informe de stock"
+        android:textColor="@color/primary"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:paddingBottom="10dp" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Revisa niveles y productos por categoría." android:textColor="@color/text_secondary" android:textSize="14sp" android:paddingBottom="12dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="2dp"
+        app:strokeColor="@color/border_soft"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <Spinner
+                android:id="@+id/spinnerReportCategory"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:contentDescription="Filtrar por categoría" />
+            <Spinner
+                android:id="@+id/spinnerReportProduct"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:contentDescription="Filtrar por producto" />
+            <Spinner
+                android:id="@+id/spinnerReportStatus"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:contentDescription="Filtrar por estado del stock" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGenerateReport"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Generar informe"
+                app:cornerRadius="15dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvReportSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cargando informe…"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:padding="12dp"
+        android:background="@drawable/bg_info"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ListView
+            android:id="@+id/listStockReport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="8dp"
+            android:padding="6dp" />
+        <TextView
+            android:id="@+id/tvReportEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No hay productos para estos filtros."
+            android:textColor="@color/text_secondary"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

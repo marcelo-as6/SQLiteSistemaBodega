@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/bg_light" android:fillViewport="true">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ubicación del local" android:textColor="@color/primary" android:textSize="24sp" android:textStyle="bold" />
+  <com.google.android.material.button.MaterialButton android:id="@+id/btnLocationBack" style="@style/Widget.SQLite.Button.Text" android:layout_width="wrap_content" android:layout_height="44dp" android:text="← Volver al inicio" android:insetLeft="0dp" android:insetRight="0dp" />
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="La dirección y las coordenadas se guardan localmente en SQLite. El mapa se abre con OpenStreetMap, sin API key." android:textColor="@color/text_secondary" android:textSize="14sp" android:paddingTop="5dp" android:paddingBottom="14dp" />
+  <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="20dp" app:cardElevation="2dp" app:strokeColor="@color/border_soft" app:strokeWidth="1dp">
+   <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <EditText android:id="@+id/etLocationName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Nombre del local" android:singleLine="true" />
+    <EditText android:id="@+id/etLocationAddress" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Dirección" android:inputType="textPostalAddress" />
+    <EditText android:id="@+id/etLocationLatitude" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Latitud (ej. -33.4489)" android:inputType="numberDecimal|numberSigned" android:singleLine="true" />
+    <EditText android:id="@+id/etLocationLongitude" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Longitud (ej. -70.6693)" android:inputType="numberDecimal|numberSigned" android:singleLine="true" />
+    <TextView android:id="@+id/tvLocationUpdated" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/text_secondary" android:textSize="12sp" android:paddingTop="4dp" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnSaveLocation" android:layout_width="match_parent" android:layout_height="52dp" android:text="Guardar ubicación" app:cornerRadius="15dp" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnOpenMap" style="@style/Widget.SQLite.Button.Outlined" android:layout_width="match_parent" android:layout_height="52dp" android:text="Abrir mapa OpenStreetMap" app:cornerRadius="15dp" />
+   </LinearLayout>
+  </com.google.android.material.card.MaterialCardView>
+ </LinearLayout>
+</ScrollView>

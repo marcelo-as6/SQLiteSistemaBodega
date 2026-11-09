@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/bg_light" android:padding="16dp">
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Productos" android:textSize="25sp" android:textStyle="bold" android:textColor="@color/primary" android:paddingBottom="3dp" />
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Busca, revisa y administra existencias." android:textSize="14sp" android:textColor="@color/text_secondary" android:paddingBottom="12dp" />
+ <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="20dp" app:cardElevation="2dp" app:strokeColor="@color/border_soft" app:strokeWidth="1dp">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+   <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Buscar por nombre, SKU o código de barras" app:boxBackgroundMode="outline" app:startIconDrawable="@android:drawable/ic_menu_search" app:boxCornerRadiusTopStart="14dp" app:boxCornerRadiusTopEnd="14dp" app:boxCornerRadiusBottomStart="14dp" app:boxCornerRadiusBottomEnd="14dp">
+    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etSearch" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="text" />
+   </com.google.android.material.textfield.TextInputLayout>
+   <com.google.android.material.button.MaterialButton android:id="@+id/btnScanBarcode" style="@style/Widget.SQLite.Button.Outlined" android:layout_width="match_parent" android:layout_height="50dp" android:text="Buscar con código de barras" android:layout_marginTop="4dp" app:cornerRadius="15dp" />
+   <Spinner android:id="@+id/spinnerCategory" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="4dp" />
+   <com.google.android.material.button.MaterialButton android:id="@+id/btnAddProduct" android:layout_width="match_parent" android:layout_height="52dp" android:text="Nuevo producto" android:textStyle="bold" app:cornerRadius="15dp" />
+  </LinearLayout>
+ </com.google.android.material.card.MaterialCardView>
+ <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="12dp">
+  <ListView android:id="@+id/listProducts" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@android:color/transparent" android:dividerHeight="8dp" android:background="@android:color/transparent" android:padding="4dp" />
+  <TextView android:id="@+id/tvEmpty" android:layout_width="match_parent" android:layout_height="match_parent" android:text="No hay productos." android:textColor="@color/text_secondary" android:textSize="14sp" android:gravity="center" android:visibility="gone" />
+ </FrameLayout>
+</LinearLayout>

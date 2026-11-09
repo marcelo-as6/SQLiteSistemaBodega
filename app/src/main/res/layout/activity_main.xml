@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/bg_light" android:fillViewport="true">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="24dp">
+  <TextView android:layout_width="76dp" android:layout_height="76dp" android:gravity="center" android:background="@drawable/bg_company_mark" android:text="INV" android:textColor="@color/white" android:textSize="23sp" android:textStyle="bold" android:letterSpacing="0.06" android:elevation="3dp" />
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Gestión de bodega" android:textColor="@color/primary" android:textSize="25sp" android:textStyle="bold" android:gravity="center" android:layout_marginTop="14dp" />
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Productos, existencias y movimientos" android:textColor="@color/text_secondary" android:textSize="14sp" android:gravity="center" android:layout_marginTop="4dp" android:layout_marginBottom="22dp" />
+  <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="24dp" app:cardElevation="2dp" app:strokeColor="@color/border_soft" app:strokeWidth="1dp">
+   <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Iniciar sesión" android:textColor="@color/text_primary" android:textSize="19sp" android:textStyle="bold" android:paddingBottom="16dp" />
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Usuario" app:boxBackgroundMode="outline" app:boxCornerRadiusTopStart="14dp" app:boxCornerRadiusTopEnd="14dp" app:boxCornerRadiusBottomStart="14dp" app:boxCornerRadiusBottomEnd="14dp">
+     <com.google.android.material.textfield.TextInputEditText android:id="@+id/etUsername" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:hint="Contraseña" app:boxBackgroundMode="outline" app:boxCornerRadiusTopStart="14dp" app:boxCornerRadiusTopEnd="14dp" app:boxCornerRadiusBottomStart="14dp" app:boxCornerRadiusBottomEnd="14dp" app:endIconMode="password_toggle">
+     <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPassword" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnLogin" android:layout_width="match_parent" android:layout_height="54dp" android:text="Entrar" android:textSize="15sp" android:textStyle="bold" android:layout_marginTop="18dp" app:cornerRadius="15dp" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnLoginLocation" style="@style/Widget.SQLite.Button.Outlined" android:layout_width="match_parent" android:layout_height="50dp" android:text="Ubicación del local" android:textSize="14sp" android:layout_marginTop="8dp" app:cornerRadius="15dp" />
+   </LinearLayout>
+  </com.google.android.material.card.MaterialCardView>
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="VENTAS Y SERVICIOS PROFESIONALES EIRL" android:textColor="@color/text_secondary" android:textSize="10sp" android:textStyle="bold" android:gravity="center" android:letterSpacing="0.08" android:layout_marginTop="22dp" />
+ </LinearLayout>
+</ScrollView>

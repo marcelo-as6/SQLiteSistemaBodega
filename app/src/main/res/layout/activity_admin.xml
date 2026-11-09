@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/bg_light" android:fillViewport="true">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Administración" android:textSize="25sp" android:textStyle="bold" android:textColor="@color/primary" android:paddingBottom="3dp" />
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Gestiona accesos, perfiles y datos de bodega." android:textSize="14sp" android:textColor="@color/text_secondary" android:paddingBottom="14dp" />
+  <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="20dp" app:cardElevation="2dp" app:strokeColor="@color/border_soft" app:strokeWidth="1dp">
+   <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Usuarios y roles" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/primary" android:padding="4dp" android:paddingBottom="8dp" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnNewUser" android:layout_width="match_parent" android:layout_height="52dp" android:text="Crear usuario" android:textAlignment="viewStart" app:cornerRadius="15dp" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnListUsers" style="@style/Widget.SQLite.Button.Outlined" android:layout_width="match_parent" android:layout_height="50dp" android:text="Ver usuarios" android:textAlignment="viewStart" app:cornerRadius="15dp" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnNewRole" android:layout_width="match_parent" android:layout_height="52dp" android:text="Crear rol" android:textAlignment="viewStart" app:cornerRadius="15dp" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnListRoles" style="@style/Widget.SQLite.Button.Outlined" android:layout_width="match_parent" android:layout_height="50dp" android:text="Ver roles" android:textAlignment="viewStart" app:cornerRadius="15dp" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnPermissions" android:layout_width="match_parent" android:layout_height="52dp" android:text="Gestionar permisos" android:textAlignment="viewStart" app:cornerRadius="15dp" />
+   </LinearLayout>
+  </com.google.android.material.card.MaterialCardView>
+  <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:cardCornerRadius="20dp" app:cardElevation="2dp" app:strokeColor="@color/border_soft" app:strokeWidth="1dp">
+   <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Datos maestros" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/primary" android:padding="4dp" android:paddingBottom="8dp" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnNewCategory" android:layout_width="match_parent" android:layout_height="52dp" android:text="Crear categoría" android:textAlignment="viewStart" app:cornerRadius="15dp" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnListCategories" style="@style/Widget.SQLite.Button.Outlined" android:layout_width="match_parent" android:layout_height="50dp" android:text="Ver categorías" android:textAlignment="viewStart" app:cornerRadius="15dp" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnNewSupplier" android:layout_width="match_parent" android:layout_height="52dp" android:text="Crear proveedor" android:textAlignment="viewStart" app:cornerRadius="15dp" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnListSuppliers" style="@style/Widget.SQLite.Button.Outlined" android:layout_width="match_parent" android:layout_height="50dp" android:text="Ver proveedores" android:textAlignment="viewStart" app:cornerRadius="15dp" />
+   </LinearLayout>
+  </com.google.android.material.card.MaterialCardView>
+ </LinearLayout>
+</ScrollView>
